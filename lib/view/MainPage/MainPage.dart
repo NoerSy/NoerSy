@@ -1,10 +1,6 @@
-import 'package:floating_navbar/floating_navbar.dart';
-import 'package:floating_navbar/floating_navbar_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:layout/layout.dart';
-import 'package:myprofile_flutter/component/HexColor.dart';
 import 'package:myprofile_flutter/theme/Platecolor.dart';
 
 class MainPage extends StatefulWidget {
@@ -13,21 +9,6 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int _selectedIndex = 0;
-
-  List _navigationRail = <NavigationRailDestination>[
-    NavigationRailDestination(
-      icon: Icon(
-        Icons.favorite_border,
-        color: Platecolor.bg2,
-      ),
-      selectedIcon: Icon(
-        Icons.favorite,
-        color: Platecolor.rnBlue,
-      ),
-      label: Text('First'),
-    )
-  ];
 
   @override
   Widget build(BuildContext context) {
