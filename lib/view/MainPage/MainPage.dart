@@ -1,3 +1,4 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -9,12 +10,11 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        scrollDirection: Axis.horizontal,
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
             alignment: Alignment.center,
@@ -25,7 +25,9 @@ class _MainPageState extends State<MainPage> {
                   padding: const EdgeInsets.only(left: 40, right: 40),
                   decoration: BoxDecoration(
                     color: Platecolor.fullGray,
-                    borderRadius: BorderRadius.only(topRight: Radius.circular(5), bottomRight: Radius.circular(5)),
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(5),
+                        bottomRight: Radius.circular(5)),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -60,6 +62,16 @@ class _MainPageState extends State<MainPage> {
                           fontStyle: FontStyle.italic,
                         ),
                       ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SelectableText(
+                          "GitHub - Linkedin - Twitter - Instagram",
+                          style: GoogleFonts.lato(
+                            fontSize: 18,
+                            color: Platecolor.bg2,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -67,11 +79,7 @@ class _MainPageState extends State<MainPage> {
             ),
           ),
           Expanded(
-            child: Container(
-              alignment: Alignment.center,
-              height: MediaQuery.of(context).size.height / 2,
-              child: Text("test"),
-            ),
+            child: Center(child: Text("test")),
           ),
         ],
       ),
