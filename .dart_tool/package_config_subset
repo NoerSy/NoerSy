@@ -66,6 +66,10 @@ http_parser
 2.12
 file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0/
 file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0/lib/
+js
+2.12
+file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.3/
+file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.3/lib/
 layout
 2.12
 file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/layout-0.6.2/
@@ -150,6 +154,10 @@ typed_data
 2.12
 file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.3.0/
 file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.3.0/lib/
+url_strategy
+2.12
+file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/url_strategy-0.2.0/
+file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/url_strategy-0.2.0/lib/
 vector_math
 2.12
 file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.0/
@@ -174,4 +182,8 @@ flutter_test
 2.12
 file:///home/noersy/snap/flutter/common/flutter/packages/flutter_test/
 file:///home/noersy/snap/flutter/common/flutter/packages/flutter_test/lib/
+flutter_web_plugins
+2.12
+file:///home/noersy/snap/flutter/common/flutter/packages/flutter_web_plugins/
+file:///home/noersy/snap/flutter/common/flutter/packages/flutter_web_plugins/lib/
 2

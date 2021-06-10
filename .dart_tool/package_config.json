@@ -86,6 +86,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "gap",
       "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/gap-2.0.0",
       "packageUri": "lib/",
@@ -106,6 +112,12 @@
     {
       "name": "http_parser",
       "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "js",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -242,6 +254,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "url_strategy",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/url_strategy-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.0",
       "packageUri": "lib/",
@@ -266,7 +284,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-06-09T13:50:21.560097Z",
+  "generated": "2021-06-09T22:51:35.155097Z",
   "generator": "pub",
   "generatorVersion": "2.12.2"
 }
