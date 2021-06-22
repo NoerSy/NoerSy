@@ -3,12 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myprofile_flutter/theme/Platecolor.dart';
 
+import 'package:universal_html/html.dart';
+
 class MainPage extends StatefulWidget {
   @override
   _MainPageState createState() => _MainPageState();
 }
 
 class _MainPageState extends State<MainPage> {
+  @override
+  void initState() {
+    super.initState();
+    // Remove `loading` div
+    final loader = document.getElementsByClassName('loader-wrapper');
+    if (loader.isNotEmpty) {
+      loader.first.remove();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -39,11 +51,19 @@ class _MainPageState extends State<MainPage> {
                         child: Row(
                           children: [
                             Container(
-                              width: 150,
-                              height: 150,
                               decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.grey,
+                                ),
                                   shape: BoxShape.circle,
                                   color: Color(0xFFe0f2f1)),
+                              child: CircleAvatar(
+                                backgroundColor: Colors.grey,
+                                backgroundImage: AssetImage(
+                                  "assets/images/profle_img.jpeg",
+                                ),
+                                radius: 80,
+                              ),
                             ),
                             Container(
                               padding: const EdgeInsets.only(left: 12),
@@ -109,8 +129,8 @@ class _MainPageState extends State<MainPage> {
                               width: MediaQuery.of(context).size.width / 2,
                               child: SelectableText(
                                   "         I am a Junior Developer. "
-                                   "Currently studying at the University of Muhammadiyah Malang in the Department of Informatics "
-                                   "and has been studying for four semesters with two experiences of two project contacts."),
+                                  "Currently studying at the University of Muhammadiyah Malang in the Department of Informatics "
+                                  "and has been studying for four semesters with two experiences of two project contacts."),
                             ),
                           ],
                         ),
