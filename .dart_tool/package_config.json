@@ -45,7 +45,7 @@
     },
     {
       "name": "csslib",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/csslib-0.17.0",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/csslib-0.17.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -69,7 +69,7 @@
     },
     {
       "name": "file",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/file-6.1.1",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/file-6.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -135,7 +135,7 @@
     },
     {
       "name": "layout",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/layout-0.6.2",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/layout-1.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -159,19 +159,19 @@
     },
     {
       "name": "path_provider",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.2",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path_provider_linux",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.0.0",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path_provider_macos",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-2.0.0",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-2.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -183,37 +183,43 @@
     },
     {
       "name": "path_provider_windows",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.1",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "pedantic",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.0",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "platform",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.0.0",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "plugin_platform_interface",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.0",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "process",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.1",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "quiver",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/quiver-3.0.1",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/quiver-3.0.1+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "side_navigation",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/side_navigation-0.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -305,10 +311,10 @@
       "name": "myprofile_flutter",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.7"
+      "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-06-22T06:38:08.140043Z",
+  "generated": "2021-10-21T09:13:47.019106Z",
   "generator": "pub",
   "generatorVersion": "2.12.2"
 }
