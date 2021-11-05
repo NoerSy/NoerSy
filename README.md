@@ -4,7 +4,7 @@
 
 - 🔭 I’m currently working as a Asisten Lab in Infotech UMM
 
-- 🌱 I’m currently learning **VueJs & Golang**
+- 🌱 I’m currently learning **Flutter & Dart**
 
 - 👨‍💻 All of my projects are available at [noersy.github.io](https://noersy.github.io/) ``underbuild``
 
