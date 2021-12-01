@@ -9,7 +9,7 @@ class ChildDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedOpacity(
-      duration: current == index ? Duration(seconds: 2) : Duration(milliseconds: 600),
+      duration: current == index ? const Duration(seconds: 2) : const Duration(milliseconds: 600),
       opacity: current == index ? 1 : 0,
       child: child,
     );

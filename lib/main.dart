@@ -1,15 +1,17 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:myprofile_flutter/view/main_page/dashboard_page.dart';
+import 'package:myprofile_flutter/view/page/dashboard_page.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:url_strategy/url_strategy.dart';
 
 void main() {
   setPathUrlStrategy();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   State<MyApp> createState() => _MyAppState();
 }
@@ -20,7 +22,7 @@ class _MyAppState extends State<MyApp> {
 
   void display() {
     Future.delayed(
-      Duration(milliseconds: 1),
+      const Duration(milliseconds: 1),
       () => setState(() {
         _opacity = true;
       }),
@@ -45,9 +47,9 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         backgroundColor: Colors.transparent,
         body: AnimatedOpacity(
-          duration: Duration(milliseconds: 600),
+          duration: const Duration(milliseconds: 600),
           opacity: _opacity ? 1 : 0,
-          child: DashboardPage(),
+          child: const DashboardPage(),
         ),
       ),
       theme: ThemeData.dark(),

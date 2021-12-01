@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:myprofile_flutter/theme/platecolor.dart';
 
 class ButtonTopNav extends StatelessWidget {
   final String title;

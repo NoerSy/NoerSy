@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myprofile_flutter/view/main_page/home_page.dart';
+import 'package:myprofile_flutter/view/page/home_page.dart';
 import 'package:myprofile_flutter/view/widget/button_topnav.dart';
 import 'package:myprofile_flutter/view/widget/child_dasboard.dart';
 import 'package:myprofile_flutter/view/widget/dashboard.dart';
@@ -12,14 +12,14 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
-  PageController _pageController = PageController();
+  final PageController _pageController = PageController();
   int _index = 0;
 
   void setTo(int index) {
     setState(() {
       _index = index;
       _pageController.animateToPage(index,
-          duration: Duration(seconds: 2), curve: Curves.ease);
+          duration: const Duration(seconds: 2), curve: Curves.ease);
     });
   }
 
@@ -38,14 +38,14 @@ class _DashboardPageState extends State<DashboardPage> {
         ChildDashboard(
           index: 0,
           current: _index,
-          child: HomePage(),
+          child: const HomePage(),
         ),
         ChildDashboard(
           index: 1,
           current: _index,
           child: Container(
             alignment: Alignment.center,
-            child: Text("test"),
+            child: const Text("test"),
           ),
         ),
       ],

@@ -21,9 +21,9 @@ class _HomePageState extends State<HomePage> {
               .headline6
               ?.copyWith(fontWeight: FontWeight.w300),
         ),
-        SizedBox(height: 8.0),
+        const SizedBox(height: 8.0),
         Text("I’m Nur Syahfei", style: Theme.of(context).textTheme.headline2),
-        SizedBox(height: 8.0),
+        const SizedBox(height: 8.0),
         Text(
           "Freelance Designer, specialized in UI/UX.",
           style: Theme.of(context)
@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
               .headline5
               ?.copyWith(fontWeight: FontWeight.w200),
         ),
-        SizedBox(height: 32.0),
+        const SizedBox(height: 32.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
