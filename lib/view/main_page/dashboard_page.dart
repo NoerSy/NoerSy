@@ -44,6 +44,7 @@ class _DashboardPageState extends State<DashboardPage> {
           index: 1,
           current: _index,
           child: Container(
+            alignment: Alignment.center,
             child: Text("test"),
           ),
         ),
