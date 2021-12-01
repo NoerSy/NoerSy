@@ -1,16 +1,10 @@
-# myprofile_flutter
+<h1 align="center">Hi 👋, I'm Nur Syahfei</h1>
+<h3 align="center">A passionate flutter developer, I also interest to make mobile and web software.</h3>
+<p>I'm a Junior Software Developer. I can work with flutter, laravel, php, javascript. Now I'm Informatics Student at University of Muhammadiyah Malang</p>
 
-Web Profile
+- 🔭 I’m currently working as a Asisten Lab in Infotech UMM
 
-## Getting Started
+- 🌱 I’m currently learning **Flutter & Dart**
 
-This project is a starting point for a Flutter application.
+- 👨‍💻 All of my projects are available at [noersy.github.io](https://noersy.github.io/) ``underbuild``
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
