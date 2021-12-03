@@ -19,8 +19,11 @@ class _DashboardPageState extends State<DashboardPage> {
   void setTo(int index) {
     setState(() {
       _index = index;
-      _pageController.animateToPage(index,
-          duration: const Duration(seconds: 2), curve: Curves.ease);
+      _pageController.animateToPage(
+        index,
+        duration: const Duration(seconds: 2),
+        curve: Curves.ease,
+      );
     });
   }
 
