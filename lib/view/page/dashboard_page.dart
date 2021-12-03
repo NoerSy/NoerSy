@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myprofile_flutter/view/page/featured_page.dart';
 import 'package:myprofile_flutter/view/page/home_page.dart';
 import 'package:myprofile_flutter/view/widget/button_topnav.dart';
 import 'package:myprofile_flutter/view/widget/child_dasboard.dart';
@@ -43,10 +44,7 @@ class _DashboardPageState extends State<DashboardPage> {
         ChildDashboard(
           index: 1,
           current: _index,
-          child: Container(
-            alignment: Alignment.center,
-            child: const Text("test"),
-          ),
+          child: const FeaturedPage(),
         ),
       ],
     );
