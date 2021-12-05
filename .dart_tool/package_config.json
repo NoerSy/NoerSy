@@ -158,6 +158,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "material_color_utilities",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/material_color_utilities-0.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.13"
+    },
+    {
       "name": "meta",
       "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.7.0",
       "packageUri": "lib/",
@@ -279,7 +285,7 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.7",
+      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.8",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -332,7 +338,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-12-01T08:44:44.609144Z",
+  "generated": "2021-12-05T19:24:14.730566Z",
   "generator": "pub",
-  "generatorVersion": "2.16.0-20.0.dev"
+  "generatorVersion": "2.16.0-80.0.dev"
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:myprofile_flutter/view/page/ajari_privacy_page.dart';
 import 'package:myprofile_flutter/view/page/dashboard_page.dart';
+import 'package:myprofile_flutter/view/page/featured_page.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:url_strategy/url_strategy.dart';
 
@@ -17,26 +19,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool _opacity = false;
   final loader = html.document.getElementsByClassName('loader-wrapper');
-
-  void display() {
-    Future.delayed(
-      const Duration(milliseconds: 1),
-      () => setState(() {
-        _opacity = true;
-      }),
-    );
-  }
 
   @override
   void initState() {
     if (loader.isNotEmpty) {
       loader.first.remove();
-      display();
     }
-    if (kDebugMode) _opacity = true;
-      super.initState();
+    super.initState();
   }
 
   @override
@@ -44,14 +34,12 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Nur Syahfei',
-      home: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: AnimatedOpacity(
-          duration: const Duration(milliseconds: 600),
-          opacity: _opacity ? 1 : 0,
-          child: const DashboardPage(),
-        ),
-      ),
+      initialRoute: '/',
+      routes:  {
+        "/" : (context) => const DashboardPage(),
+        "/feature" : (context) =>  const FeaturedPage(),
+        "/ajari-privacy" : (context) => const AjariPrivacyPage(),
+      },
       theme: ThemeData.dark(),
     );
   }

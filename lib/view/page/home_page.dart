@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
         Text("I’m Nur Syahfei", style: Theme.of(context).textTheme.headline2),
         const SizedBox(height: 8.0),
         Text(
-          "Freelance Designer, specialized in UI/UX.",
+          "Flutter Developer, specialized in Mobile.",
           style: Theme.of(context)
               .textTheme
               .headline5

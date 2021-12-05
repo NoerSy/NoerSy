@@ -1,9 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class FeaturedPage extends StatelessWidget {
+class FeaturedPage extends StatefulWidget {
   const FeaturedPage({Key? key}) : super(key: key);
 
+  @override
+  State<FeaturedPage> createState() => _FeaturedPageState();
+}
+
+class _FeaturedPageState extends State<FeaturedPage> {
   @override
   Widget build(BuildContext context) {
     return Padding(
