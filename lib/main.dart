@@ -34,10 +34,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Nur Syahfei',
-      initialRoute: '/',
+      initialRoute: '/dashboard',
       routes:  {
-        "/" : (context) => const DashboardPage(),
-        "/feature" : (context) =>  const FeaturedPage(),
+        "/dashboard" : (context) => const DashboardPage(),
         "/ajari-privacy" : (context) => const AjariPrivacyPage(),
       },
       theme: ThemeData.dark(),
