@@ -66,23 +66,27 @@ class ProjectCard extends StatefulWidget {
 }
 
 class _ProjectCardState extends State<ProjectCard> {
-  final ScrollController _controller = ScrollController();
-  double _offfset = 1.0;
+  static final ScrollController _controller = ScrollController(initialScrollOffset: 1.0);
+  static double _offfset = 1.0;
+  static bool _atEdnge = false;
 
   @override
   void initState() {
-    _controller.animateTo(_offfset,
-        duration: const Duration(milliseconds: 500), curve: Curves.ease);
 
-    Timer.periodic(const Duration(seconds: 1, milliseconds: 500), (_) {
+    Timer.periodic(Duration(seconds: _atEdnge ? 1 : 2), (_) {
       if (_controller.position.atEdge) {
-        setState(() => _offfset = 1.0);
+        setState((){
+          _offfset = 1.0;
+          _atEdnge = true;
+        });
       } else {
-        setState(() => _offfset = _controller.offset + 200);
+        setState((){
+          _offfset = _controller.offset + 100.0;
+          _atEdnge = false;
+        });
       }
 
-      _controller.animateTo(_offfset,
-          duration: const Duration(milliseconds: 500), curve: Curves.ease);
+      _controller.animateTo(_offfset, duration: const Duration(seconds: 2), curve: _atEdnge ? Curves.ease : Curves.linear);
     });
     super.initState();
   }
@@ -97,11 +101,47 @@ class _ProjectCardState extends State<ProjectCard> {
           color: Platecolor.bg2.withOpacity(0.1),
           borderRadius: BorderRadius.circular(10),
         ),
-        child: Row(
-          children: [
-            Expanded(
-              flex: 4,
-              child: Container(
+        child: Scrollbar(
+          controller: _controller,
+          isAlwaysShown: true,
+          child: Stack(
+            children: [
+              Container(
+                margin: const EdgeInsets.all(4.0),
+                alignment: Alignment.centerLeft,
+                decoration: BoxDecoration(
+                  color: Platecolor.bg2.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Container(
+                  padding: const EdgeInsets.only(
+                    bottom: 12.0,
+                    top: 8.0,
+                    right: 8.0,
+                    left: 8.0,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    controller: _controller,
+                    child: Row(
+                      children: [
+                        Image.asset('assets/images/ajari/1.png'),
+                        Image.asset('assets/images/ajari/2.png'),
+                        Image.asset('assets/images/ajari/3.png'),
+                        Image.asset('assets/images/ajari/4.png'),
+                        Image.asset('assets/images/ajari/5.png'),
+                        Image.asset('assets/images/ajari/6.png'),
+                        Image.asset('assets/images/ajari/7.png'),
+                        Image.asset('assets/images/ajari/8.png'),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Container(
                 margin: const EdgeInsets.all(4.0),
                 padding: const EdgeInsets.symmetric(
                   horizontal: 12.0,
@@ -109,8 +149,15 @@ class _ProjectCardState extends State<ProjectCard> {
                 ),
                 alignment: Alignment.topCenter,
                 decoration: BoxDecoration(
-                  color: Platecolor.bg2.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(10),
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Platecolor.bg3.withOpacity(0.7),
+                      Colors.transparent,
+                    ],
+                  ),
                 ),
                 child: SingleChildScrollView(
                   child: Column(
@@ -118,16 +165,15 @@ class _ProjectCardState extends State<ProjectCard> {
                       Text(
                         "Ajari",
                         style: TextStyle(
-                          fontSize: 36.0,
+                          fontSize: 46.0,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       SizedBox(height: 26.0),
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                        padding: EdgeInsets.symmetric(horizontal: 26.0),
                         child: Text(
-                          "Aplikasi Ajari adalah aplikasi berbasis mobile yang dibuat untuk memfasilitasi Tempat Pembelajaran Al-Quran (TPQ) dalam membantu guru mengajar para santri dan santri belajar membaca iqro berdasarkan proses belajar mandiri yang dipandu oleh guru.",
-                          textAlign: TextAlign.justify,
+                          "Ajari is a mobile-based application created to facilitate the Al-Quran Learning Place (TPQ) for help teachers teach students and students learn read Iqro based on an independent learning process guided by the teacher.",                          textAlign: TextAlign.justify,
                           style: TextStyle(fontSize: 16.0),
                         ),
                       ),
@@ -135,45 +181,8 @@ class _ProjectCardState extends State<ProjectCard> {
                   ),
                 ),
               ),
-            ),
-            Expanded(
-              flex: 5,
-              child: Container(
-                margin: const EdgeInsets.all(4.0),
-                alignment: Alignment.centerLeft,
-                decoration: BoxDecoration(
-                  color: Platecolor.bg2.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Scrollbar(
-                  controller: _controller,
-                  child: Container(
-                    padding: const EdgeInsets.only(
-                        bottom: 12.0, top: 8.0, right: 8.0, left: 8.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      controller: _controller,
-                      child: Row(
-                        children: [
-                          Image.asset('assets/images/ajari/1.png'),
-                          Image.asset('assets/images/ajari/2.png'),
-                          Image.asset('assets/images/ajari/3.png'),
-                          Image.asset('assets/images/ajari/4.png'),
-                          Image.asset('assets/images/ajari/5.png'),
-                          Image.asset('assets/images/ajari/6.png'),
-                          Image.asset('assets/images/ajari/7.png'),
-                          Image.asset('assets/images/ajari/8.png'),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

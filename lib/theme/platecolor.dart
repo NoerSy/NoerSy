@@ -12,4 +12,5 @@ class Platecolor{
 
   static Color bg = HexColor.fromHex("#afb9c8");
   static Color bg2 = HexColor.fromHex("#f9f3f3");
+  static Color bg3 = HexColor.fromHex("#242f3f");
 }
