@@ -152,3 +152,16 @@ class _AjariPrivacyPageState extends State<AjariPrivacyPage> {
     );
   }
 }
+
+class TestT extends StatelessWidget {
+  const TestT({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      child: const Text("data"),
+    );
+  }
+}
+

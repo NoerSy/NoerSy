@@ -62,11 +62,11 @@ class _DashboardPageState extends State<DashboardPage> {
         child: Dashboard(
           pageController: _pageController,
           topNav: [
-            ButtonTopNav(title: "#Home", onPressed: () => setTo(0)),
-            ButtonTopNav(title: "#Featured_Works", onPressed: () => setTo(1)),
-            ButtonTopNav(title: "#Playground", onPressed: () => setTo(2)),
-            ButtonTopNav(title: "#About", onPressed: () => setTo(3)),
-            ButtonTopNav(title: "#Contact", onPressed: () => setTo(4)),
+            ButtonTopNav(title: "#Home", onPressed: () => setTo(0), index: 0, current: _index,),
+            ButtonTopNav(title: "#Featured_Works", onPressed: () => setTo(1), index: 1, current: _index),
+            ButtonTopNav(title: "#Playground", onPressed: () => setTo(2), index: 2, current: _index),
+            ButtonTopNav(title: "#About", onPressed: () => setTo(3), index: 3, current: _index),
+            ButtonTopNav(title: "#Contact", onPressed: () => setTo(4),index: 4, current: _index),
           ],
           children: [
             ChildDashboard(
