@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
       initialRoute: '/',
       routes:  {
         "/" : (context) => const DashboardPage(),
-        "/ajari" : (context) => const TestT(),
+        "/ajari" : (context) => const AjariPrivacyPage(),
       },
       theme: ThemeData.dark(),
     );

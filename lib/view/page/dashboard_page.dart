@@ -60,6 +60,7 @@ class _DashboardPageState extends State<DashboardPage> {
         duration: const Duration(milliseconds: 600),
         opacity: _opacity ? 1 : 0,
         child: Dashboard(
+          current: _index,
           pageController: _pageController,
           topNav: [
             ButtonTopNav(title: "#Home", onPressed: () => setTo(0), index: 0, current: _index,),

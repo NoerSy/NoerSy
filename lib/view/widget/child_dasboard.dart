@@ -22,14 +22,18 @@ class _ChildDashboardState extends State<ChildDashboard> {
   void startDelayed() async {
     if (widget.current == widget.index) {
       Future.delayed(const Duration(milliseconds: 600)).then((value) {
-        setState(() {
-          _isDisplayed = true;
-        });
+        if (mounted) {
+          setState(() {
+            _isDisplayed = true;
+          });
+        }
       });
     } else {
-      setState(() {
-        _isDisplayed = false;
-      });
+      if (mounted) {
+        setState(() {
+          _isDisplayed = false;
+        });
+      }
     }
   }
 

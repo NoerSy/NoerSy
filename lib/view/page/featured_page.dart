@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myprofile_flutter/theme/platecolor.dart';
 
@@ -38,9 +37,9 @@ class _FeaturedPageState extends State<FeaturedPage> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-                ProjectCard(
-                  constraints: constraints,
-                ),
+              ProjectCard(
+                constraints: constraints,
+              ),
             ],
             // gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             //   crossAxisCount: 3,
@@ -71,18 +70,24 @@ class _ProjectCardState extends State<ProjectCard> {
   @override
   void initState() {
     Timer.periodic(const Duration(seconds: 1), (_) {
-      if (_controller.position.atEdge) {
-        setState((){
-          _offfset = 1.0;
-          _atEdnge = true;
-        });
-      } else {
-        setState((){
-          _offfset = _controller.offset + 100.0;
-          _atEdnge = false;
-        });
+      if (_controller.hasClients && mounted) {
+        if (_controller.position.atEdge) {
+          setState(() {
+            _offfset = 1.0;
+            _atEdnge = true;
+          });
+        } else {
+          setState(() {
+            _offfset = _controller.offset + 100.0;
+            _atEdnge = false;
+          });
+        }
+        _controller.animateTo(
+          _offfset,
+          duration: Duration(seconds: _atEdnge ? 1 : 2),
+          curve: _atEdnge ? Curves.ease : Curves.linear,
+        );
       }
-      _controller.animateTo(_offfset, duration: Duration(seconds: _atEdnge ? 1 : 2), curve: _atEdnge ? Curves.ease : Curves.linear);
     });
     super.initState();
   }
@@ -101,36 +106,31 @@ class _ProjectCardState extends State<ProjectCard> {
           children: [
             Container(
               margin: const EdgeInsets.all(4.0),
+              padding: const EdgeInsets.only(
+                bottom: 12.0,
+                top: 8.0,
+                right: 8.0,
+                left: 8.0,
+              ),
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
                 color: Platecolor.bg2.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Container(
-                padding: const EdgeInsets.only(
-                  bottom: 12.0,
-                  top: 8.0,
-                  right: 8.0,
-                  left: 8.0,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  controller: _controller,
-                  child: Row(
-                    children: [
-                      Image.asset('assets/images/ajari/1.png'),
-                      Image.asset('assets/images/ajari/2.png'),
-                      Image.asset('assets/images/ajari/3.png'),
-                      Image.asset('assets/images/ajari/4.png'),
-                      Image.asset('assets/images/ajari/5.png'),
-                      Image.asset('assets/images/ajari/6.png'),
-                      Image.asset('assets/images/ajari/7.png'),
-                      Image.asset('assets/images/ajari/8.png'),
-                    ],
-                  ),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                controller: _controller,
+                child: Row(
+                  children: [
+                    Image.asset('assets/images/ajari/1.png'),
+                    Image.asset('assets/images/ajari/2.png'),
+                    Image.asset('assets/images/ajari/3.png'),
+                    Image.asset('assets/images/ajari/4.png'),
+                    Image.asset('assets/images/ajari/5.png'),
+                    Image.asset('assets/images/ajari/6.png'),
+                    Image.asset('assets/images/ajari/7.png'),
+                    Image.asset('assets/images/ajari/8.png'),
+                  ],
                 ),
               ),
             ),
@@ -167,7 +167,8 @@ class _ProjectCardState extends State<ProjectCard> {
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 26.0),
                       child: Text(
-                        "Ajari is a mobile-based application created to facilitate the Al-Quran Learning Place (TPQ) for help teachers teach students and students learn read Iqro based on an independent learning process guided by the teacher.",                          textAlign: TextAlign.justify,
+                        "Ajari is a mobile-based application created to facilitate the Al-Quran Learning Place (TPQ) for help teachers teach students and students learn read Iqro based on an independent learning process guided by the teacher.",
+                        textAlign: TextAlign.justify,
                         style: TextStyle(fontSize: 16.0),
                       ),
                     ),
