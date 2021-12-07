@@ -59,43 +59,49 @@ class _DashboardPageState extends State<DashboardPage> {
       body: AnimatedOpacity(
         duration: const Duration(milliseconds: 600),
         opacity: _opacity ? 1 : 0,
-        child: Dashboard(
-          current: _index,
-          pageController: _pageController,
-          topNav: [
-            ButtonTopNav(title: "#Home", onPressed: () => setTo(0), index: 0, current: _index,),
-            ButtonTopNav(title: "#Featured_Works", onPressed: () => setTo(1), index: 1, current: _index),
-            ButtonTopNav(title: "#Playground", onPressed: () => setTo(2), index: 2, current: _index),
-            ButtonTopNav(title: "#About", onPressed: () => setTo(3), index: 3, current: _index),
-            ButtonTopNav(title: "#Contact", onPressed: () => setTo(4),index: 4, current: _index),
-          ],
-          children: [
-            ChildDashboard(
-              index: 0,
-              current: _index,
-              child: const HomePage(),
-            ),
-            ChildDashboard(
-              index: 1,
-              current: _index,
-              child: const FeaturedPage(),
-            ),
-            ChildDashboard(
-              index: 2,
-              current: _index,
-              child: const Center(child: Text("data")),
-            ),
-            ChildDashboard(
-              index: 3,
-              current: _index,
-              child: const Center(child: Text("data")),
-            ),
-            ChildDashboard(
-              index: 4,
-              current: _index,
-              child: const Center(child: Text("data")),
-            ),
-          ],
+        child: NotificationListener(
+          onNotification : (ScrollEndNotification notification) {
+              setState(() => _index = _pageController.page?.round() ?? _index);
+              return notification.dragDetails != null ? false : true;
+          },
+          child: Dashboard(
+            current: _index,
+            pageController: _pageController,
+            topNav: [
+              ButtonTopNav(title: "#Home", onPressed: () => setTo(0), index: 0, current: _index,),
+              ButtonTopNav(title: "#Featured_Works", onPressed: () => setTo(1), index: 1, current: _index),
+              ButtonTopNav(title: "#Playground", onPressed: () => setTo(2), index: 2, current: _index),
+              ButtonTopNav(title: "#About", onPressed: () => setTo(3), index: 3, current: _index),
+              ButtonTopNav(title: "#Contact", onPressed: () => setTo(4),index: 4, current: _index),
+            ],
+            children: [
+              ChildDashboard(
+                index: 0,
+                current: _index,
+                child: const HomePage(),
+              ),
+              ChildDashboard(
+                index: 1,
+                current: _index,
+                child: const FeaturedPage(),
+              ),
+              ChildDashboard(
+                index: 2,
+                current: _index,
+                child: const Center(child: Text("data")),
+              ),
+              ChildDashboard(
+                index: 3,
+                current: _index,
+                child: const Center(child: Text("data")),
+              ),
+              ChildDashboard(
+                index: 4,
+                current: _index,
+                child: const Center(child: Text("data")),
+              ),
+            ],
+          ),
         ),
       ),
     );
