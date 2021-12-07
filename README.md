@@ -4,5 +4,5 @@
 
 - 🌱 I’m currently learning **Flutter & Dart**
 
-- 👨‍💻 All of my projects are available at [noersy.github.io](https://noersy.github.io/){:target="_blank"} ``underbuild``
+- 👨‍💻 All of my projects are available at [noersy.github.io](https://noersy.github.io/) ``underbuild``
 
