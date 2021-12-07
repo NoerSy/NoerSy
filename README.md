@@ -6,3 +6,5 @@
 
 - 👨‍💻 All of my projects are available at [noersy.github.io](https://noersy.github.io/) ``underbuild``
 
+- <a href="http://example.com/" target="_blank">example</a>
+
