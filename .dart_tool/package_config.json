@@ -50,32 +50,8 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "cupertino_icons",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.4",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "fake_async",
       "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "ffi",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/ffi-1.1.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "file",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/file-6.1.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "floating_navbar",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/floating_navbar-2.0.1+1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -104,44 +80,14 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "gap",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/gap-2.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "google_fonts",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/google_fonts-2.1.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "html",
       "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/html-0.15.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
-      "name": "http",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.4",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
-      "name": "http_parser",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "js",
       "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "layout",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/layout-1.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -166,78 +112,6 @@
     {
       "name": "path",
       "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "path_provider",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.7",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
-      "name": "path_provider_android",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_android-2.0.9",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
-      "name": "path_provider_ios",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_ios-2.0.7",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
-      "name": "path_provider_linux",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "path_provider_macos",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-2.0.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "path_provider_platform_interface",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-2.0.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "path_provider_windows",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.4",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "platform",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.0.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "plugin_platform_interface",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "process",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.4",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
-      "name": "quiver",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/quiver-3.0.1+1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "side_navigation",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/side_navigation-0.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -314,25 +188,13 @@
       "languageVersion": "2.14"
     },
     {
-      "name": "win32",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/win32-2.3.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
-      "name": "xdg_directories",
-      "rootUri": "file:///home/noersy/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.2.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "myprofile_flutter",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-12-07T03:23:40.948385Z",
+  "generated": "2021-12-07T06:46:09.178294Z",
   "generator": "pub",
   "generatorVersion": "2.16.0-20.0.dev"
 }

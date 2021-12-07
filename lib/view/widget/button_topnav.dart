@@ -30,8 +30,7 @@ class ButtonTopNav extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           title,
-          style:
-              Theme.of(context).textTheme.subtitle1?.copyWith(fontSize: 20.0),
+          style: Theme.of(context).textTheme.subtitle1?.copyWith(fontSize: 20.0),
         ),
       ),
     );
