@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:myprofile_flutter/theme/platecolor.dart';
 import 'package:myprofile_flutter/view/widget/button_topnav.dart';
@@ -102,7 +103,7 @@ class _DashboardState extends State<Dashboard> {
                 ),
               ),
             ),
-            Positioned(bottom: 100, child: Text("${constraints.maxWidth}")),
+            if(kDebugMode) Positioned(bottom: 100, child: Text("${constraints.maxWidth}")),
           ],
         );
       },

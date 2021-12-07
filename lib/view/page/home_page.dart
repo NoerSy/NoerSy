@@ -1,3 +1,5 @@
+import 'dart:js' as js;
+
 import 'package:flutter/material.dart';
 import 'package:myprofile_flutter/theme/costume_icons.dart';
 
@@ -35,10 +37,22 @@ class _HomePageState extends State<HomePage> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _button(CostumeIcons.twitter, () {}),
-            _button(CostumeIcons.github, () {}),
-            _button(CostumeIcons.linkedin, () {}),
-            _button(CostumeIcons.instagram, () {}),
+            _button(CostumeIcons.twitter, () {
+              js.context.callMethod(
+                  'open', ['https://twitter.com/NurSyahfei']);
+            }),
+            _button(CostumeIcons.github, () {
+              js.context.callMethod(
+                  'open', ['https://github.com/noersy']);
+            }),
+            _button(CostumeIcons.linkedin, () {
+              js.context.callMethod(
+                  'open', ['https://www.linkedin.com/in/noersy']);
+            }),
+            _button(CostumeIcons.instagram, () {
+              js.context.callMethod(
+                  'open', ['https://www.instagram.com/nursyahfei']);
+            }),
           ],
         )
       ],
