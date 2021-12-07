@@ -4,7 +4,4 @@
 
 - 🌱 I’m currently learning **Flutter & Dart**
 
-- 👨‍💻 All of my projects are available at [noersy.github.io](https://noersy.github.io/) ``underbuild``
-
-- <a href="http://example.com/" target="_blank">example</a>
-
+- 👨‍💻 All of my projects are available at <a href="https://noersy.github.io/" target="_blank">noersy.github.io</a> ``underbuild``
