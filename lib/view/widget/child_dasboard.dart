@@ -5,12 +5,12 @@ class ChildDashboard extends StatefulWidget {
   final int current;
   final Widget child;
 
-  const ChildDashboard(
-      {Key? key,
-      required this.index,
-      required this.child,
-      required this.current})
-      : super(key: key);
+  const ChildDashboard({
+    Key? key,
+    required this.index,
+    required this.child,
+    required this.current,
+  }) : super(key: key);
 
   @override
   State<ChildDashboard> createState() => _ChildDashboardState();

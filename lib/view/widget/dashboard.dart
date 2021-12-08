@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:myprofile_flutter/theme/platecolor.dart';
 import 'package:myprofile_flutter/view/widget/button_topnav.dart';
 import 'package:myprofile_flutter/view/widget/child_dasboard.dart';
@@ -29,84 +30,70 @@ class _DashboardState extends State<Dashboard> {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (BuildContext context, BoxConstraints constraints) {
-        if (constraints.maxWidth > 930) {
-          _isWade = true;
-          _isOpen = false;
+    return GestureDetector(
+      onTap: (){
+        if(mounted){
+          setState(() => _isOpen = false);
         }
-        if (constraints.maxWidth < 930) _isWade = false;
-        return Stack(
-          alignment: Alignment.center,
-          children: [
-            PageView(
-              scrollDirection: Axis.vertical,
-              controller: widget.pageController,
-              children: widget.children,
-            ),
-            if (constraints.maxWidth > 930)
-              Positioned(
-                width: 1000,
-                height: 90,
-                top: 20,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: widget.topNav,
-                ),
-              )
-            else
-              Positioned(
-                width: 1000,
-                height: 90,
-                top: 20,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      constraints: constraints,
-                      padding: const EdgeInsets.all(8.0),
-                      child: widget.topNav[widget.current]..onSmall = openNav,
-                    )
-                  ],
-                ),
-              ),
-            Positioned(
-              top: 100,
-              child: AnimatedOpacity(
-                duration: Duration(milliseconds: _duration),
-                opacity: _isOpen ? 1 : 0,
-                child: Column(
-                  children: [
-                    for (ButtonTopNav item in widget.topNav)
-                      if (item.index != widget.current)
-                        Container(
-                          margin: const EdgeInsets.all(4.0),
-                          decoration: BoxDecoration(
-                            color: Platecolor.bg3,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Platecolor.bg2.withOpacity(0.05),
-                                spreadRadius: 1,
-                              ),
-                              BoxShadow(
-                                color: Platecolor.bg2.withOpacity(0.02),
-                                spreadRadius: 2,
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(7.0),
-                          ),
-                          child: item..onSmall = navTO,
-                        )
-                  ],
-                ),
-              ),
-            ),
-            if(kDebugMode) Positioned(bottom: 100, child: Text("${constraints.maxWidth}")),
-          ],
-        );
       },
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
+            if (constraints.maxWidth > 930) {
+              _isWade = true;
+              _isOpen = false;
+            }
+            if (constraints.maxWidth < 930) _isWade = false;
+            return Stack(
+              alignment: Alignment.center,
+              children: [
+                PageView(
+                  scrollDirection: Axis.vertical,
+                  controller: widget.pageController,
+                  children: widget.children,
+                ),
+                Positioned(
+                  height: 90.0,
+                  top: 8.0,
+                  width: constraints.maxWidth,
+                  child: AnimatedSwitcher(
+                    child: _switchNav(constraints),
+                    duration: const Duration(milliseconds: 100),
+                    switchInCurve: Curves.fastOutSlowIn,
+                    switchOutCurve: Curves.fastOutSlowIn,
+                  ),
+                ),
+                Positioned(
+                  top: 100,
+                  child: AnimatedOpacity(
+                    duration: Duration(milliseconds: _duration),
+                    opacity: _isOpen ? 1 : 0,
+                    child: Column(
+                      children: [
+                        for (ButtonTopNav item in widget.topNav)
+                          if (item.index != widget.current)
+                            Container(
+                              height: 80,
+                              width: constraints.maxWidth - 16.0,
+                              child: item..onSmall = navTO,
+                              decoration: BoxDecoration(
+                                color: Platecolor.bg3.withOpacity(0.9),
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                            ),
+                      ],
+                    ),
+                  ),
+                ),
+                if (kDebugMode)
+                  Positioned(bottom: 80, child: Text("maxWidth : ${constraints.maxWidth}")),
+                  Positioned(bottom: 100, child: Text("maxHigh : ${constraints.maxHeight}")),
+              ],
+            );
+          },
+        ),
+      ),
     );
   }
 
@@ -125,6 +112,48 @@ class _DashboardState extends State<Dashboard> {
       } else {
         setState(() => _isOpen = true);
       }
+    }
+  }
+
+  Widget _switchNav(BoxConstraints constraints) {
+    if (constraints.maxWidth > 930) {
+      return _topNav(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: widget.topNav,
+      );
+    } else {
+      return _topNav(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        child: Container(
+          height: 80,
+          constraints: constraints,
+          width: constraints.maxWidth,
+          margin: const EdgeInsets.all(8.0),
+          child: widget.topNav[widget.current]..onSmall = openNav,
+        ),
+      );
+    }
+  }
+
+  Widget _topNav({
+    required mainAxisAlignment,
+    required crossAxisAlignment,
+    List<ButtonTopNav>? children,
+    Widget? child,
+  }) {
+    if (children != null) {
+      return SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          mainAxisAlignment: mainAxisAlignment,
+          crossAxisAlignment: crossAxisAlignment,
+          children: children,
+        ),
+      );
+    } else {
+      return child ?? const SizedBox.shrink();
     }
   }
 }

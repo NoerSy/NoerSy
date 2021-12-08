@@ -20,31 +20,34 @@ class ButtonTopNav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: const Duration(milliseconds: 500),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(7.0),
-        color: index != current
-            ? Colors.transparent
-            : Colors.white.withOpacity(0.05),
-      ),
-      child: TextButton(
-        style: TextButton.styleFrom(
-          primary: Colors.white,
-          padding: const EdgeInsets.all(22.0),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 500),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(7.0),
+          color: index != current
+              ? Colors.transparent
+              : Colors.white.withOpacity(0.05),
         ),
-        onPressed: () {
-          onPressed.call();
-          if (onSmall != null) onSmall!.call();
-        },
-        child: AnimatedContainer(
-          width: width,
-          height: 25,
-          duration: const Duration(milliseconds: 500),
-          child: Text(
-            title,
-            style:
-                Theme.of(context).textTheme.subtitle1?.copyWith(fontSize: 20.0),
+        child: TextButton(
+          style: TextButton.styleFrom(
+            primary: Colors.white,
+            padding: const EdgeInsets.all(22.0),
+          ),
+          onPressed: () {
+            onPressed.call();
+            if (onSmall != null) onSmall!.call();
+          },
+          child: AnimatedContainer(
+            width: width,
+            height: 25,
+            duration: const Duration(milliseconds: 500),
+            child: Text(
+              title,
+              style:
+                  Theme.of(context).textTheme.subtitle1?.copyWith(fontSize: 20.0),
+            ),
           ),
         ),
       ),
