@@ -38,7 +38,8 @@ class _Featured2PageState extends State<Featured2Page> {
             ),
             CardFeature(
               title: "Mi-Lab",
-              caption: "caption",
+              caption:
+                  "Aplikasi Mobile Ilab merupakan aplikasi yang terintegrasi langsung dengan https://infotech.umm.ac.id/",
               type: "type",
               gradient: LinearGradient(
                 colors: [
@@ -112,48 +113,54 @@ class _CardFeatureState extends State<CardFeature> {
         cursor: SystemMouseCursors.click,
         onEnter: (value) => setState(() => onHover = !onHover),
         onExit: (value) => setState(() => onHover = !onHover),
-        child: !onHover
-            ? Container(
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            AnimatedOpacity(
+              duration: const Duration(milliseconds: 300),
+              opacity: !onHover ? 1 : 0,
+              child: Container(
                 alignment: Alignment.center,
                 child: Text(widget.title, style: titleStyle),
                 decoration: BoxDecoration(
                   gradient: widget.gradient,
                   borderRadius: BorderRadius.circular(12.0),
                 ),
-              )
-            : Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      widget.caption,
-                      textAlign: TextAlign.center,
-                      style: captionStyle,
-                      textWidthBasis: TextWidthBasis.longestLine,
-                    ),
-                    const SizedBox(height: 26.0),
-                    TextButton(
-                      onPressed: () {},
-                      style: TextButton.styleFrom(
-                        primary: Colors.white,
-                        padding: const EdgeInsets.all(23.0),
-                        side: const BorderSide(color: Colors.white),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(7.0),
-                        ),
-                      ),
-                      child: Text(
-                        "More",
-                        style: caption2Style,
-                      ),
-                    )
-                  ],
-                ),
-                decoration: BoxDecoration(
-                  color: Colors.black45.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(12.0),
-                ),
               ),
+            ),
+            AnimatedOpacity(
+              duration: const Duration(milliseconds: 300),
+              opacity: onHover ? 1 : 0,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    widget.caption,
+                    textAlign: TextAlign.center,
+                    style: captionStyle,
+                    textWidthBasis: TextWidthBasis.longestLine,
+                  ),
+                  const SizedBox(height: 26.0),
+                  TextButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(
+                      primary: Colors.white,
+                      padding: const EdgeInsets.all(23.0),
+                      side: const BorderSide(color: Colors.white),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(7.0),
+                      ),
+                    ),
+                    child: Text(
+                      "More",
+                      style: caption2Style,
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
