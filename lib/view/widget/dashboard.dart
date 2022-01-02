@@ -71,24 +71,27 @@ class _DashboardState extends State<Dashboard> {
                     opacity: _isOpen ? 1 : 0,
                     child: Column(
                       children: [
-                        for (ButtonTopNav item in widget.topNav)
-                          if (item.index != widget.current)
-                            Container(
-                              height: 80,
-                              width: constraints.maxWidth - 16.0,
-                              child: item..onSmall = navTO,
-                              decoration: BoxDecoration(
-                                color: Platecolor.bg3.withOpacity(0.9),
-                                borderRadius: BorderRadius.circular(10.0),
+                        if(_isOpen)...[
+                          for (ButtonTopNav item in widget.topNav)
+                            if (item.index != widget.current)
+                              Container(
+                                height: 80,
+                                width: constraints.maxWidth - 16.0,
+                                child: item..onSmall = navTO,
+                                decoration: BoxDecoration(
+                                  color: Platecolor.bg3.withOpacity(0.9),
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
                               ),
-                            ),
+                          ]
                       ],
                     ),
                   ),
                 ),
-                if (kDebugMode)
-                  Positioned(bottom: 80, child: Text("maxWidth : ${constraints.maxWidth}")),
-                  Positioned(bottom: 100, child: Text("maxHigh : ${constraints.maxHeight}")),
+                if (kDebugMode) ...[
+                    Positioned(bottom: 80, child: Text("maxWidth : ${constraints.maxWidth}")),
+                    Positioned(bottom: 100, child: Text("maxHigh : ${constraints.maxHeight}")),
+                  ]
               ],
             );
           },
