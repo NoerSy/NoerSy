@@ -13,3 +13,8 @@ TextStyle get captionStyle => const TextStyle(
   fontSize: 20.0,
   fontWeight: FontWeight.w400,
 );
+
+TextStyle get caption2Style => const TextStyle(
+  fontSize: 16.0,
+  fontWeight: FontWeight.w400,
+);

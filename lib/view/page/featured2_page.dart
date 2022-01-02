@@ -23,43 +23,55 @@ class _Featured2PageState extends State<Featured2Page> {
         const SizedBox(height: 75.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             CardFeature(
               title: "Ajari",
               caption:
-                  "Ajari is a mobile-based application created to facilitate the Al-Quran Learning Place (TPQ) for help teachers teach students and students learn read Iqro based on an independent learning process guided by the teacher.",
+                  "Ajari is a mobile-based application created to facilitate the Al-Quran Learning Place (TPQ).",
               type: "assets/images/ajari/",
+              gradient: LinearGradient(
+                colors: [
+                  Colors.green.withOpacity(0.2),
+                  Colors.greenAccent.withOpacity(0.2)
+                ],
+              ),
             ),
             CardFeature(
-              title: "title",
+              title: "Mi-Lab",
               caption: "caption",
               type: "type",
+              gradient: LinearGradient(
+                colors: [
+                  Colors.deepOrange.withOpacity(0.2),
+                  Colors.orange.withOpacity(0.2)
+                ],
+              ),
             ),
-            CardFeature(
-              title: "title",
-              caption: "caption",
-              type: "type",
-            ),
+            // const CardFeature(
+            //   title: "title",
+            //   caption: "caption",
+            //   type: "type",
+            // ),
           ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            CardFeature(
-              title: "title",
-              caption: "caption",
-              type: "type",
-            ),
-            CardFeature(
-              title: "title",
-              caption: "caption",
-              type: "type",
-            ),
-            CardFeature(
-              title: "title",
-              caption: "caption",
-              type: "type",
-            ),
+            // CardFeature(
+            //   title: "title",
+            //   caption: "caption",
+            //   type: "type",
+            // ),
+            // CardFeature(
+            //   title: "title",
+            //   caption: "caption",
+            //   type: "type",
+            // ),
+            // CardFeature(
+            //   title: "title",
+            //   caption: "caption",
+            //   type: "type",
+            // ),
           ],
         )
       ],
@@ -69,12 +81,14 @@ class _Featured2PageState extends State<Featured2Page> {
 
 class CardFeature extends StatefulWidget {
   final String title, caption, type;
+  final Gradient? gradient;
 
   const CardFeature(
       {Key? key,
       required this.title,
       required this.caption,
-      required this.type})
+      required this.type,
+      this.gradient})
       : super(key: key);
 
   @override
@@ -91,7 +105,7 @@ class _CardFeatureState extends State<CardFeature> {
       height: 250,
       width: 450,
       decoration: BoxDecoration(
-        color: Colors.grey.withOpacity(0.5),
+        color: widget.gradient?.colors[0] ?? Colors.grey.withOpacity(0.5),
         borderRadius: BorderRadius.circular(12.0),
       ),
       child: MouseRegion(
@@ -100,13 +114,45 @@ class _CardFeatureState extends State<CardFeature> {
         onExit: (value) => setState(() => onHover = !onHover),
         child: !onHover
             ? Container(
+                alignment: Alignment.center,
+                child: Text(widget.title, style: titleStyle),
                 decoration: BoxDecoration(
+                  gradient: widget.gradient,
                   borderRadius: BorderRadius.circular(12.0),
                 ),
               )
             : Container(
-                alignment: Alignment.center,
-                child: Text(widget.title),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      widget.caption,
+                      textAlign: TextAlign.center,
+                      style: captionStyle,
+                      textWidthBasis: TextWidthBasis.longestLine,
+                    ),
+                    const SizedBox(height: 26.0),
+                    TextButton(
+                      onPressed: () {},
+                      style: TextButton.styleFrom(
+                        primary: Colors.white,
+                        padding: const EdgeInsets.all(23.0),
+                        side: const BorderSide(color: Colors.white),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(7.0),
+                        ),
+                      ),
+                      child: Text(
+                        "More",
+                        style: caption2Style,
+                      ),
+                    )
+                  ],
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.black45.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
               ),
       ),
     );
