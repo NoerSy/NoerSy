@@ -7,9 +7,7 @@
 - 👨‍💻 All of my projects are available at [noersy.github.io](https://noersy.github.io/) ``underbuild``
 
 <div align="center">
-  <a href="#">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=noersy&layout=compact&theme=radical&hide_border=true" alt="noersy's top lag" >
-   </a>
+  <br>
   <a href="#">
     <img src="http://github-readme-streak-stats.herokuapp.com?user=noersy&theme=radical&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" alt="github streak" >
    </a>
@@ -25,3 +23,6 @@
 ![](https://img.shields.io/badge/Code-Dart-informational?style=flat&logo=Dart&logoColor=white&color=0078d6)
 ![](https://img.shields.io/badge/Code-Flutter-informational?style=flat&logo=Flutter&logoColor=white&color=0078d6)
 ![](https://img.shields.io/badge/Code-Laravel-informational?style=flat&logo=Laravel&logoColor=white&color=0078d6)
+![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=JavaScript&logoColor=white&color=0078d6)
+![](https://img.shields.io/badge/Code-JQuery-informational?style=flat&logo=JQuery&logoColor=white&color=0078d6)
+![](https://img.shields.io/badge/Code-Python-informational?style=flat&logo=Python&logoColor=white&color=0078d6)
