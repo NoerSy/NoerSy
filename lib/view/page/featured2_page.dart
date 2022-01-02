@@ -99,7 +99,11 @@ class _CardFeatureState extends State<CardFeature> {
         onEnter: (value) => setState(() => onHover = !onHover),
         onExit: (value) => setState(() => onHover = !onHover),
         child: !onHover
-            ? null
+            ? Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+              )
             : Container(
                 alignment: Alignment.center,
                 child: Text(widget.title),
