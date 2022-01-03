@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:myprofile_flutter/view/page/featured2_page.dart';
-import 'package:myprofile_flutter/view/page/featured_page.dart';
 import 'package:myprofile_flutter/view/page/home_page.dart';
 import 'package:myprofile_flutter/view/widget/button_topnav.dart';
 import 'package:myprofile_flutter/view/widget/child_dasboard.dart';
