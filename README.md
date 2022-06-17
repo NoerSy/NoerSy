@@ -16,7 +16,7 @@
 
 ## Tools
 
-![](https://img.shields.io/badge/OS-Ubuntu-informational?style=for-the-badge&logo=Ubuntu&logoColor=white&color=0078d6)
+![](https://img.shields.io/badge/OS-MacOs-informational?style=for-the-badge&logo=MacOs&logoColor=white&color=0078d6)
 ![](https://img.shields.io/badge/CLI-Terminal-informational?style=for-the-badge&logo=Windows%20Terminal&logoColor=white&color=0078d6)
 ![](https://img.shields.io/badge/Editor-Android_Studio-informational?style=for-the-badge&logo=AndroidStudio&logoColor=white&color=0078d6)
 ![](https://img.shields.io/badge/Editor-VSCode-informational?style=for-the-badge&logo=visual-studio-code&logoColor=white&color=0078d6)
